@@ -1,0 +1,273 @@
+:root {
+    --blanco:#ffffff;
+    --oscuro:#212121;
+    --primario:#ffc107;
+    --secundario:#0097a7;
+    --gris:#757575;
+}
+
+/* Contenido general*/
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory:
+}
+
+.nav-superior .servicios {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-size: 16px;
+    font-family: 'Kanit', sans-serif; 
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);  /*es el fondo en gradiente*/
+}
+
+/*Contenido del titulo*/
+
+.titulo {       /*este es el titulo "Pablo Rivelli" sin el Freelancer*/
+    text-align: center;
+    font-size: 3.8rem;
+}
+
+
+.titulo span {       /*este es solo el "Freelancer"*/
+    font-size: 2rem;    
+}
+
+/*Contenido de la barra de navegación superior*/
+
+.nav-bg {
+    background-color:var(--secundario) 
+    
+}
+.nav-superior {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media (min-width:760px) {
+    .nav-superior {
+        flex-direction: row;
+        justify-content: space-around;
+    }       
+}
+
+.nav-superior a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size:2rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.nav-superior a:hover {
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+
+/*Contenido de la sección de  la foto principal*/
+
+.contenedor { /*Afecta a la barra de navegación y a la seccion principal de Mis Servicios*/
+    max-width:120rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.boton  {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500px;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    
+}
+
+.boton:hover {
+    cursor:pointer;
+}
+
+
+@media (min-width:768px) {
+    .boton {
+        width:auto;
+    }
+}
+
+.foto-principal {
+    background-image: url(img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position:relative;
+    margin-bottom: 1rem;
+}
+
+.contenido {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);
+    width:100%;
+    height:100%;
+
+    display: flex;                              
+    flex-direction: column;                      
+    align-items: center;                       
+    justify-content: center;        
+
+    /*este ultimo parrafo se puede usar para alinear vertical y horizantalmente*/
+}
+
+.contenido h2,
+.contenido p {
+    color:var(--blanco)
+}
+
+
+.sombra {
+    -webkit-box-shadow: 6px 14px 25px -1px rgba(94,91,94,0.53);
+    -moz-box-shadow: 6px 14px 25px -1px rgba(94,91,94,0.53);
+    box-shadow: 6px 14px 25px -1px rgba(94,91,94,0.53);
+    background-color:var(--blanco);
+    border-radius: 1rem;
+    padding: 2rem;
+   
+}
+
+/* servicios*/
+@media (min-width:768px) {
+ .servicios {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-column: 1rem;
+}
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+
+.servicio p {
+    line-height: 2;
+    align-items: center;
+
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+.iconos {
+    display:flex;
+    background-color: var(--primario);
+    justify-content: space-around;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;     /*al 50% los bordes se vuelve redondo*/
+}
+
+/*formulario de contacto*/
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto; /*esto es para centrar el cuadro de form*/
+    padding:2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;  
+}
+
+
+    
+
+
+.campo {
+    margin-bottom: 1rem;
+    
+
+}
+
+
+.campo label {
+    color: var(--blanco);
+    font-weight: 500;
+    margin-bottom: .5rem;
+    display: block;
+    text-align: left;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    align-items: end;
+}
+
+.enviar .boton {
+    width:auto;
+}
+
+.wi {
+    margin-top: 1rem;
+
+}
+
+.flex { 
+    display:flex;
+
+
+}
+
+.alinear-derecha { 
+    justify-content: flex-end;
+
+}
+
+textarea {
+   display: flex;
+   width: 100%;
+   height: 100%;
+   padding-bottom: 10rem;
+}
+
+
+footer p {
+    text-align: center;
+}
+
+legend {
+    align-content: center;
+    margin: auto ;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    color:var(--primario);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
